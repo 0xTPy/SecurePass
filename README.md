@@ -26,5 +26,7 @@ python securepass -h
 </p>
 
 gen -long 15 : Permet de générer un mot de passe avec une longueur personnalisable. Dans cet exemple, la longueur est fixée à 15.
+
 verif : Permet de vérifier la sécurité de votre mot de passe.
+
 -h : Affiche l'aide et les commandes disponibles.
