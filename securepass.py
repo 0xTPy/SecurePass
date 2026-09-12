@@ -13,7 +13,7 @@ def generate(nb):
 	for i in range(nb):
 		mdp += random.choice(tout)
 	print("")
-	print("Le mot de passe est : ", mdp)
+	print("The password is : ", mdp)
 	print("")
 	
 def check(mdp):
@@ -23,45 +23,45 @@ def check(mdp):
 	n_maj = sum(1 for c in mdp if c in maj)
 	
 	print("")
-	print(f"Symboles : {n_ct} | Chiffres : {n_cf} | Lettres : {n_ab} | Majuscules : {n_maj}")
+	print(f"Symbols : {n_ct} | Numbers : {n_cf} | Letters : {n_ab} | Capital letters : {n_maj}")
 	print("")
 	
 	if len(mdp) < 8:
 		print("")
-		print("Le mot de passe est FAIBLE")
+		print("The password is WEAK")
 		print("")
 
 	elif (n_cf == 0 or n_ab == 0 or n_maj ==0 or n_ct == 0) and len(mdp) < 10:
 		print("")
-		print("Le mot de passe est MOYEN")
+		print("The password is MEDIUM")
 		print("")
 	
 	elif (n_cf == 0 or n_ab == 0 or n_maj == 0 or n_ct == 0):
 		print("")
-		print("MOYEN")
+		print("The password is MEDIUM")
 			
 	elif len(mdp) < 12:
 		print("")
-		print("Le mot de passe est BON")
+		print("The password is CORRECT")
 		print("")
 
 	else:
 		print("")
-		print("Le mot de passe est ROBUSTE")
+		print("The password is STRONG")
 		print("")
 
-analy = argparse.ArgumentParser(description="Générateur et vérificateur de mot de passe")
+analy = argparse.ArgumentParser(description="Password generator and checker")
 analy2 = analy.add_subparsers(dest="commande")
 
-gen_mdp = analy2.add_parser("gen", help="Générer un mot de passe")
-gen_mdp.add_argument("--long", type=int, required=True, metavar="nombre", help="Longueur du mot de passe")
+gen_mdp = analy2.add_parser("gen", help="Generate a password")
+gen_mdp.add_argument("--len", type=int, required=True, metavar="number", help="Password length")
 
-verif_mdp = analy2.add_parser("verif", help="Vérifier un mot de passe")
-verif_mdp.add_argument("motdepasse", metavar="motdepasse", help="Le mot de passe à vérifier")
+verif_mdp = analy2.add_parser("verif", help="Verify a password")
+verif_mdp.add_argument("password", metavar="password", help="The password to verify")
 
 args = analy.parse_args()
 
 if args.commande == "gen":
-	generate(args.long)
+	generate(args.len)
 elif args.commande == "verif":
-	check(args.motdepasse)
+	check(args.password)
