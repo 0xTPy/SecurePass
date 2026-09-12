@@ -15,7 +15,7 @@ cd SecurePass
 ||UTILISATION||
 </p>
 
-python securepass.py gen -long 15
+python securepass.py gen --long 15
 
 python securepass.py verif "votre_mot_de_passe"
 
