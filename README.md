@@ -10,8 +10,9 @@ INSTALLATION
 git clone https://github.com/0xTPy/SecurePass.git
 cd SecurePass
 ```
-
+<p align="center">
 UTILISATION
+</p>  
 
 python securepass.py gen --long 15
 
