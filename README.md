@@ -3,7 +3,7 @@
 SecurePass est un programme Python qui vous permet de vérifier si votre mot de passe est difficile à craquer et de générer des mots de passe sécurisés.
 
 <p align="center">
-||INSTALLATION||
+##INSTALLATION
 </p>
 
 ```bash
@@ -12,7 +12,7 @@ cd SecurePass
 ```
 
 <p align="center">
-||UTILISATION||
+##UTILISATION
 </p>
 
 python securepass.py gen --long 15
@@ -22,7 +22,7 @@ python securepass.py verif "votre_mot_de_passe"
 python securepass.py -h
 
 <p align="center">
-||EXPLICATION||
+##EXPLICATION
 </p>
 
 gen -long 15 : Permet de générer un mot de passe avec une longueur personnalisable. Dans cet exemple, la longueur est fixée à 15.
