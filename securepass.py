@@ -51,7 +51,7 @@ def check(mdp):
 		print("")
 
 analy = argparse.ArgumentParser(description="Password generator and checker")
-analy2 = analy.add_subparsers(dest="commande")
+analy2 = analy.add_subparsers(dest="command")
 
 gen_mdp = analy2.add_parser("gen", help="Generate a password")
 gen_mdp.add_argument("--len", type=int, required=True, metavar="number", help="Password length")
